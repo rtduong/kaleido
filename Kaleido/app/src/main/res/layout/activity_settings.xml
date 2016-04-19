@@ -15,7 +15,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Settings"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView" />
+        android:id="@+id/txtSettingId" />
 
     <Button
         android:layout_width="wrap_content"
@@ -36,8 +36,8 @@
         android:text="About"
         android:id="@+id/btnAboutId"
         android:layout_alignTop="@+id/btnSoundId"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/txtSettingId"
+        android:layout_toEndOf="@+id/txtSettingId"
         android:layout_marginLeft="77dp"
         android:layout_marginStart="77dp"
         android:layout_alignBottom="@+id/btnSoundId" />

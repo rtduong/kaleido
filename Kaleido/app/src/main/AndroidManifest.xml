@@ -19,7 +19,12 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:screenOrientation="sensorLandscape">></activity>
+            android:screenOrientation="sensorLandscape">
+            >
+        </activity>
+        <activity
+            android:name=".SelectStoryActivity"
+            android:screenOrientation="sensorLandscape"></activity>
     </application>
 
 </manifest>
