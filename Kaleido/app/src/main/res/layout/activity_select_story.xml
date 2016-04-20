@@ -18,9 +18,44 @@
         android:layout_centerHorizontal="true" />
 
     <ImageButton
+        android:layout_width="129dp"
+        android:layout_height="200dp"
+        android:id="@+id/StoryOneId"
+        android:src="@drawable/flash_poster"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/txtSelectStoryId"
+        android:layout_toStartOf="@+id/txtSelectStoryId"
+        android:scaleType="centerCrop"
+        android:clickable="true" />
+
+    <ImageButton
+        android:layout_width="129dp"
+        android:layout_height="200dp"
+        android:id="@+id/StoryTwoId"
+        android:src="@drawable/superman_poster"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        android:layout_alignTop="@+id/StoryOneId"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="129dp"
+        android:layout_height="200dp"
+        android:id="@+id/StoryThreeId"
+        android:src="@drawable/wonderwoman_poster"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        android:layout_alignTop="@+id/StoryTwoId"
+        android:layout_toRightOf="@+id/txtSelectStoryId"
+        android:layout_toEndOf="@+id/txtSelectStoryId" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/StoryOneId"
-        android:src=""/>
+        android:text="Back"
+        android:id="@+id/btnBackId"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

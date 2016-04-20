@@ -22,8 +22,8 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Play button clicked");
-//                Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
-//                startActivity(i);
+                Intent i = new Intent(getApplicationContext(), SelectStoryActivity.class);
+                startActivity(i);
             }
         });
 
