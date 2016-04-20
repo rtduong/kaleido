@@ -1,5 +1,6 @@
 package edu.uw.rtduong.kaleido;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,13 +17,15 @@ public class SelectStoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_story);
 
+        Log.v(TAG, "Activity Started");
+
         final ImageButton iBtnStoryOne = (ImageButton) this.findViewById(R.id.StoryOneId);
         iBtnStoryOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Story One button clicked");
-//                Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
-//                startActivity(i);
+                Intent i = new Intent(getApplicationContext(), StoryActivity.class);
+                startActivity(i);
             }
         });
 
