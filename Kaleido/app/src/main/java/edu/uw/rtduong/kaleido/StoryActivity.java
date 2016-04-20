@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
+import android.widget.ImageView;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 
@@ -15,11 +16,11 @@ public class StoryActivity extends AppCompatActivity {
 
     private static final String TAG = "StoryActivity";
 
-    Button nextPage;
-    ImageSwitcher imPicture;
-    Button btnChoiceOne;
-    Button btnChoiceTwo;
-    TextSwitcher txtSwitcher;
+    private Button nextPage;
+    private ImageView imPicture;
+    private Button btnChoiceOne;
+    private Button btnChoiceTwo;
+    private TextView txtSwitcher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +30,10 @@ public class StoryActivity extends AppCompatActivity {
         Log.v(TAG, "Activity Started");
 
         nextPage = (Button) this.findViewById(R.id.nextPage);
-        imPicture = (ImageSwitcher) this.findViewById(R.id.isPictureId);
+        imPicture = (ImageView) this.findViewById(R.id.isPictureId);
         btnChoiceOne = (Button) this.findViewById(R.id.choiceOne);
         btnChoiceTwo = (Button) this.findViewById(R.id.choiceTwo);
-        txtSwitcher = (TextSwitcher) this.findViewById(R.id.textSwitcher);
+        txtSwitcher = (TextView) this.findViewById(R.id.textSwitcher);
 
         pageOne();
     }

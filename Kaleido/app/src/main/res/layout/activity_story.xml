@@ -9,17 +9,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.uw.rtduong.kaleido.StoryActivity">
 
-    <ImageSwitcher
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:id="@+id/isPictureId"></ImageSwitcher>
+        android:id="@+id/isPictureId"></ImageView>
 
-    <TextSwitcher
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/textSwitcher"
         android:visibility="visible"
-        android:layout_below="@+id/isPictureId"></TextSwitcher>
+        android:layout_below="@+id/isPictureId"></TextView>
 
     <Button
         android:layout_width="100dp"
