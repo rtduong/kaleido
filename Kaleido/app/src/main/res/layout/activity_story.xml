@@ -19,7 +19,9 @@
         android:layout_height="match_parent"
         android:id="@+id/textSwitcher"
         android:visibility="visible"
-        android:layout_below="@+id/isPictureId"></TextView>
+        android:layout_below="@+id/isPictureId"
+        android:layout_toLeftOf="@+id/nextPage"
+        android:layout_toStartOf="@+id/nextPage"></TextView>
 
     <Button
         android:layout_width="100dp"
@@ -47,6 +49,8 @@
         android:visibility="invisible"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/choiceOne"
-        android:layout_alignTop="@+id/textSwitcher" />
+        android:layout_alignTop="@+id/textSwitcher"
+        android:layout_alignRight="@+id/textSwitcher"
+        android:layout_alignEnd="@+id/textSwitcher" />
 
 </RelativeLayout>

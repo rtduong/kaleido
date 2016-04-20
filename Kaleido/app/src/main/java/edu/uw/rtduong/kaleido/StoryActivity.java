@@ -53,7 +53,7 @@ public class StoryActivity extends AppCompatActivity {
 
     private void pageTwo() {
         imPicture.setImageResource(R.drawable.captain_cold);
-        txtSwitcher.setText("Sometimes he gets in fights with enemy, Captain Cold. Should the Flash fight or try to peacefully work out their differences?");
+        txtSwitcher.setText("Sometimes he gets in fights with his enemy, Captain Cold. Should the Flash fight him or try to peacefully work out their differences?");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +75,7 @@ public class StoryActivity extends AppCompatActivity {
         btnChoiceOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(TAG, "Next page button clicked");
+                Log.v(TAG, "Choice one button clicked");
 //                pageThree();
             }
         });
@@ -83,7 +83,7 @@ public class StoryActivity extends AppCompatActivity {
         btnChoiceTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(TAG, "Next page button clicked");
+                Log.v(TAG, "Choice two button clicked");
                 pageFour();
             }
         });
@@ -103,6 +103,22 @@ public class StoryActivity extends AppCompatActivity {
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
         txtSwitcher.setText("Yay, they are all friends now! Good choice!");
+
+        nextPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Next page button clicked");
+                pageFive();
+            }
+        });
+    }
+
+    private void pageFive() {
+        imPicture.setImageResource(R.drawable.mad_kid);
+        btnChoiceOne.setVisibility(View.INVISIBLE);
+        btnChoiceTwo.setVisibility(View.INVISIBLE);
+        txtSwitcher.setVisibility(View.VISIBLE);
+        txtSwitcher.setText("Here is a picture that will be in our actual story about a disagreement about smoothies!");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
