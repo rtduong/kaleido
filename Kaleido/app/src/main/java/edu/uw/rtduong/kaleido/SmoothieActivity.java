@@ -35,7 +35,7 @@ public class SmoothieActivity extends AppCompatActivity {
 
     private void pageOne() {
         imPicture.setImageResource(R.drawable.flash_poster);
-        txtSwitcher.setText("\"Welcome to my house!\", exclaimed Will");
+        txtSwitcher.setText("You and your friends, Bridgette and Will, are going over to Will's house after school. \"Welcome to my house, let's go inside!\", exclaimed Will.");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +48,7 @@ public class SmoothieActivity extends AppCompatActivity {
 
     private void pageTwo() {
         imPicture.setImageResource(R.drawable.captain_cold);
-        txtSwitcher.setText("\"Come inside!\" Will takes off his shoes and sets them to the side. Bridgette has not taken off her shoes yet. What do you want to do?");
+        txtSwitcher.setText("Will takes off his shoes at the door and sets them to the side. Bridgette has not taken off her shoes yet. What do you want to do?");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,7 +108,7 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
         nextPage.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Can you guys take off your shoes!?\", asks Will angrily");
+        txtSwitcher.setText("\"Can you guys take off your shoes?\", asks Will angrily.");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,7 +124,7 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("Bridgette is very puzzled. \"What? Why? We don't do that at my house.\"");
+        txtSwitcher.setText("Bridgette is very puzzled, \"What? Why? We don't do that at my house!\"");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,7 +140,7 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Well it's viewed as disrespectful in Asian culture and it keeps the house a lot cleaner!\" explains Will. \"Oh! That makes sense.\" Bridgette takes off her shoes.");
+        txtSwitcher.setText("\"It's viewed as disrespectful in Asian cultures and it keeps the house a lot cleaner.\", explains Will. \"Oh! That makes sense.\" Bridgette takes off her shoes.");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,7 +156,7 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Hey guys want to play some basketball?\", Will asks. \"Sure! Let's go outside and play!\", you exclaim.");
+        txtSwitcher.setText("\"Hey, do you guys want to play some basketball?\", Will asks. \"Sure! Let's go outside and play!\", you exclaim.");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -188,7 +188,7 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Hey kids, you guys must be tired! Do you want a smoothie?\", asks Will's dad. \"YESSSSS!\"");
+        txtSwitcher.setText("\"You kids must be tired! Do you want a smoothie?\", asks Will's dad. \"YES!\", the children all yell excitedly");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -204,7 +204,7 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Why don't you guys pick a fruit and let me know what you want.\" \"Let's go into the kitchen to see what fruit there are!\"");
+        txtSwitcher.setText("\"You kids can pick a fruit and let me know what you want.\", says Will's dad. \"Let's go into the kitchen to see what fruit there are!\", says Will as he leads the other kids back inside his house.");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -220,7 +220,7 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"So many fruits to choose from!\" \"What do you guys want?\"");
+        txtSwitcher.setText("\"There are so many fruits to choose from!\" \"What kind of smoothie do you guys want?\"");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -236,8 +236,8 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText(" \"I want strawberries!\" \"No! I want lychee!\" \"Ew! What is that? It looks gross. Yuck! Is that from China or something?\"" +
-                "\"It's not yuck! Have you tried before?\" \"Guys stop fighting, it's just a smoothie!\", you shout.");
+        txtSwitcher.setText(" \"I want strawberry!\", says Bridgette. \"No! I want lychee!\", exclaims Will. \"Ew! What is that? It looks gross. Yuck! Is that from China or something?\", says Bridgette." +
+                "\"It's not gross! Have you tried before?\", replies Will angrily. \"Guys stop fighting, it's just a smoothie!\", you shout.");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -253,7 +253,7 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText(" \"No!\" yells Will and he runs to his room.");
+        txtSwitcher.setText(" \"No!\" yells Will as he runs to his room.");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -311,7 +311,7 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Hey Will, are you upset?\" \"Of course I am. Can you believe what she said about my fruit? I'm hurt!\"");
+        txtSwitcher.setText("\"Hey Will, are you upset?\" \"Of course I am. Can you believe what Bridgette said about my fruit? I'm hurt!\"");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override

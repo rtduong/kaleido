@@ -28,7 +28,9 @@
         <activity
             android:name=".StoryActivity"
             android:screenOrientation="sensorLandscape" />
-        <activity android:name=".SmoothieActivity"></activity>
+        <activity
+            android:name=".SmoothieActivity"
+            android:screenOrientation="sensorLandscape"></activity>
     </application>
 
 </manifest>
