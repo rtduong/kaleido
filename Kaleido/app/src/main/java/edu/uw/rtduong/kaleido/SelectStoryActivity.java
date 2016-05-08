@@ -54,8 +54,9 @@ public class SelectStoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Back button clicked");
-//                Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
-//                startActivity(i);
+                Intent i = new Intent(getApplicationContext(), MenuActivity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

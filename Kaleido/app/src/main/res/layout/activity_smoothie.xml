@@ -11,7 +11,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="245dp"
         android:id="@+id/isPictureId"></ImageView>
 
     <TextView
@@ -20,6 +20,8 @@
         android:id="@+id/textSwitcher"
         android:visibility="visible"
         android:layout_below="@+id/isPictureId"
+        android:textSize="16sp"
+        android:textColor="#000000"
         android:layout_toLeftOf="@+id/nextPage"
         android:layout_toStartOf="@+id/nextPage"></TextView>
 
