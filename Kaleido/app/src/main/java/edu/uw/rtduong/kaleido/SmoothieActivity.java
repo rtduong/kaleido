@@ -34,14 +34,14 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageOne() {
-        imPicture.setImageResource(R.drawable.flash_poster);
+        imPicture.setImageResource(R.drawable.house_scene);
         txtSwitcher.setText("You and your friends, Bridgette and Will, are going over to Will's house after school. \"Welcome to my house, let's go inside!\", exclaimed Will.");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Next page button clicked");
-                pageTwo();
+                pageThirteen();
             }
         });
     }
@@ -249,7 +249,7 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageThirteen() {
-        imPicture.setImageResource(R.drawable.mad_kid);
+        imPicture.setImageResource(R.drawable.will_fat);
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
@@ -265,7 +265,7 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageFourteen() {
-        imPicture.setImageResource(R.drawable.mad_kid);
+        imPicture.setImageResource(R.drawable.will_fat);
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
@@ -281,7 +281,7 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageFifteen() {
-        imPicture.setImageResource(R.drawable.captain_cold);
+        imPicture.setImageResource(R.drawable.will_fat);
         txtSwitcher.setVisibility(View.INVISIBLE);
         btnChoiceOne.setVisibility(View.VISIBLE);
         nextPage.setVisibility(View.INVISIBLE);
@@ -301,17 +301,18 @@ public class SmoothieActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Choice two button clicked");
-                //dontTakeOffPage();
+                talkToBridgette();
             }
         });
     }
 
     private void talkToWill() {
-        imPicture.setImageResource(R.drawable.mad_kid);
+        imPicture.setImageResource(R.drawable.will_sad);
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
+        nextPage.setVisibility(View.VISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Hey Will, are you upset?\" \"Of course I am. Can you believe what Bridgette said about my fruit? I'm hurt!\"");
+        txtSwitcher.setText("You go inside of Will's room to talk to him. \n\"Can you believe what she said about my fruit? I’m really hurt!\" yelled Will.");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -322,5 +323,21 @@ public class SmoothieActivity extends AppCompatActivity {
         });
     }
 
+    private void talkToBridgette() {
+        imPicture.setImageResource(R.drawable.racist);
+        btnChoiceOne.setVisibility(View.INVISIBLE);
+        btnChoiceTwo.setVisibility(View.INVISIBLE);
+        nextPage.setVisibility(View.VISIBLE);
+        txtSwitcher.setVisibility(View.VISIBLE);
+        txtSwitcher.setText("You go sit next to Bridgette in the kitchen.\n \"I don’t understand why Will is so upset. Lychee is a weird fruit!\" yelled Bridgette.");
+
+        nextPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Next page button clicked");
+                pageFifteen();
+            }
+        });
+    }
 
 }
