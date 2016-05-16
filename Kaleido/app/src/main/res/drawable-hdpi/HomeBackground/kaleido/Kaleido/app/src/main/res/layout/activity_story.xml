@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.uw.rtduong.kaleido.StoryActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/isPictureId"></ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/textSwitcher"
+        android:visibility="visible"
+        android:layout_below="@+id/isPictureId"
+        android:layout_toLeftOf="@+id/nextPage"
+        android:layout_toStartOf="@+id/nextPage"></TextView>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/nextPage"
+        android:visibility="visible"
+        android:text="Next"
+        android:layout_alignBottom="@+id/textSwitcher"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textSwitcher" />
+
+    <Button
+        android:layout_width="235dp"
+        android:layout_height="match_parent"
+        android:id="@+id/choiceOne"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/textSwitcher"
+        android:layout_alignBottom="@+id/textSwitcher"></Button>
+
+    <Button
+        android:layout_width="235dp"
+        android:layout_height="match_parent"
+        android:id="@+id/choiceTwo"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/choiceOne"
+        android:layout_alignTop="@+id/textSwitcher"
+        android:layout_alignRight="@+id/textSwitcher"
+        android:layout_alignEnd="@+id/textSwitcher" />
+
+</RelativeLayout>
