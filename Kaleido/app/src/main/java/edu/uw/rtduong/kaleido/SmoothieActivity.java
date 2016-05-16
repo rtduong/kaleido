@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +14,7 @@ public class SmoothieActivity extends AppCompatActivity {
 
     private static final String TAG = "SmoothieActivity";
 
-    private Button nextPage;
+    private ImageButton nextPage;
     private ImageView imPicture;
     private Button btnChoiceOne;
     private Button btnChoiceTwo;
@@ -24,7 +25,7 @@ public class SmoothieActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_smoothie);
 
-        nextPage = (Button) this.findViewById(R.id.nextPage);
+        nextPage = (ImageButton) this.findViewById(R.id.nextPage);
         imPicture = (ImageView) this.findViewById(R.id.isPictureId);
         btnChoiceOne = (Button) this.findViewById(R.id.choiceOne);
         btnChoiceTwo = (Button) this.findViewById(R.id.choiceTwo);
