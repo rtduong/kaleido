@@ -18,8 +18,7 @@
         android:id="@+id/btnPlayId"
         android:drawableTop="@drawable/ic_play"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/title"
-        android:layout_alignEnd="@+id/title" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -27,9 +26,9 @@
         android:text="profile"
         android:id="@+id/btnProfileId"
         android:drawableTop="@drawable/ic_profile"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/tagLine"
-        android:layout_toStartOf="@+id/tagLine" />
+        android:layout_alignTop="@+id/btnSettingsId"
+        android:layout_alignLeft="@+id/tagLine"
+        android:layout_alignStart="@+id/tagLine" />
 
     <Button
         android:layout_width="wrap_content"
@@ -38,8 +37,8 @@
         android:id="@+id/btnSettingsId"
         android:drawableTop="@drawable/ic_settings"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/tagLine"
-        android:layout_toEndOf="@+id/tagLine" />
+        android:layout_alignRight="@+id/tagLine"
+        android:layout_alignEnd="@+id/tagLine" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,6 +46,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="KALEIDO"
         android:id="@+id/title"
+        android:textSize="40sp"
+        android:textIsSelectable="false"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -55,6 +57,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="~see the world for all its colors~"
         android:id="@+id/tagLine"
+        android:textSize="30sp"
+        android:textIsSelectable="true"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true" />
 

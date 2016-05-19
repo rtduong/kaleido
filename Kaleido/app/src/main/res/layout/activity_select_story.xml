@@ -16,18 +16,21 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Choose your own story"
         android:id="@+id/txtSelectStoryId"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp" />
 
     <ImageButton
         android:layout_width="129dp"
         android:layout_height="200dp"
         android:id="@+id/StoryOneId"
         android:src="@drawable/flash_poster"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/txtSelectStoryId"
-        android:layout_toStartOf="@+id/txtSelectStoryId"
         android:scaleType="centerCrop"
-        android:clickable="true" />
+        android:clickable="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp" />
 
     <ImageButton
         android:layout_width="129dp"
@@ -47,8 +50,10 @@
         android:scaleType="centerCrop"
         android:clickable="true"
         android:layout_alignTop="@+id/StoryTwoId"
-        android:layout_toRightOf="@+id/txtSelectStoryId"
-        android:layout_toEndOf="@+id/txtSelectStoryId" />
+        android:layout_toRightOf="@+id/StoryTwoId"
+        android:layout_toEndOf="@+id/StoryTwoId"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp" />
 
     <Button
         android:layout_width="wrap_content"
