@@ -7,13 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/homescreen"
     tools:context="edu.uw.rtduong.kaleido.SmoothieActivity">
 
     <ImageView
-        android:layout_width="400dp"
+        android:layout_width="450dp"
         android:layout_height="245dp"
         android:id="@+id/isPictureId"
-        android:scaleType="centerInside"
+        android:scaleType="fitCenter"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"></ImageView>
 
@@ -26,27 +27,31 @@
         android:textSize="@dimen/abc_text_size_medium_material"
         android:textColor="#000000"
         android:layout_alignRight="@+id/choiceTwo"
-        android:layout_alignEnd="@+id/choiceTwo"></TextView>
+        android:layout_alignEnd="@+id/choiceTwo"
+        android:autoText="false"
+        android:padding="10sp"></TextView>
 
     <ImageButton
-        android:layout_width="70dp"
+        android:layout_width="50dp"
         android:layout_height="500dp"
         android:id="@+id/nextPage"
         android:visibility="visible"
         android:src="@drawable/ic_next"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/isPictureId" />
+        android:layout_alignBottom="@+id/isPictureId"
+        android:background="@android:color/transparent" />
 
     <ImageButton
-        android:layout_width="70dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:id="@+id/back"
         android:src="@drawable/ic_back"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/isPictureId" />
+        android:layout_alignBottom="@+id/isPictureId"
+        android:background="@android:color/transparent" />
 
     <Button
         android:layout_width="270dp"
