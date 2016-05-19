@@ -15,6 +15,7 @@ public class SmoothieActivity extends AppCompatActivity {
     private static final String TAG = "SmoothieActivity";
 
     private ImageButton nextPage;
+    private ImageButton backPage;
     private ImageView imPicture;
     private Button btnChoiceOne;
     private Button btnChoiceTwo;
@@ -26,6 +27,7 @@ public class SmoothieActivity extends AppCompatActivity {
         setContentView(R.layout.activity_smoothie);
 
         nextPage = (ImageButton) this.findViewById(R.id.nextPage);
+        backPage = (ImageButton) this.findViewById(R.id.backPage);
         imPicture = (ImageView) this.findViewById(R.id.isPictureId);
         btnChoiceOne = (Button) this.findViewById(R.id.choiceOne);
         btnChoiceTwo = (Button) this.findViewById(R.id.choiceTwo);
@@ -37,6 +39,8 @@ public class SmoothieActivity extends AppCompatActivity {
     private void pageOne() {
         imPicture.setImageResource(R.drawable.house_scene);
         txtSwitcher.setText("You and your friends, Bridgette and Will, are going over to Will's house after school. \"Welcome to my house, let's go inside!\", exclaimed Will.");
+
+        backPage.setVisibility(View.INVISIBLE);
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -255,6 +259,8 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
         txtSwitcher.setText(" \"No!\" yells Will as he runs to his room.");
+
+        backPage.setVisibility(View.VISIBLE);
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
