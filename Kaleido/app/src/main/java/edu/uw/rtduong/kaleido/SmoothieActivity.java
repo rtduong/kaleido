@@ -186,7 +186,7 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageFive() {
-        imPicture.setImageResource(R.drawable.mad_kid);
+        imPicture.setImageResource(R.drawable.capstone5);
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
@@ -336,7 +336,7 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageTen() {
-        imPicture.setImageResource(R.drawable.mad_kid);
+        imPicture.setImageResource(R.drawable.capstone8);
         txtSwitcher.setText("“I want strawberry!” says Bridgette." +
                 "“Wait I want Lychee!” says Will");
 
@@ -359,7 +359,7 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageEleven() {
-        imPicture.setImageResource(R.drawable.mad_kid);
+        imPicture.setImageResource(R.drawable.capstone9);
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
@@ -384,7 +384,7 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageTwelve() {
-        imPicture.setImageResource(R.drawable.mad_kid);
+        imPicture.setImageResource(R.drawable.capstone3);
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
@@ -410,7 +410,7 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageThirteen() {
-        imPicture.setImageResource(R.drawable.will_fat);
+        imPicture.setImageResource(R.drawable.capstone9);
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
@@ -439,7 +439,8 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("Your friends are mad at each other. What do you want to do?");
+        txtSwitcher.setText("“You are so mean!” cried Wills as he turns and runs to his room. "
+                + "Will and Bridgette are upset. What do you want to do?");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
