@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="about"
         android:id="@+id/btnSettingsId"
-        android:drawableTop="@drawable/ic_about1"
+        android:drawableTop="@drawable/ic_info"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/tagLine"

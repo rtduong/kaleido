@@ -24,8 +24,8 @@ public class SelectStoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Story One button clicked");
-                Intent i = new Intent(getApplicationContext(), StoryActivity.class);
-                startActivity(i);
+//                Intent i = new Intent(getApplicationContext(), StoryActivity.class);
+//                startActivity(i);
             }
         });
 
