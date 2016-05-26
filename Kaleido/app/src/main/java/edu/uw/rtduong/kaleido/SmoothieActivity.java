@@ -1,6 +1,5 @@
 package edu.uw.rtduong.kaleido;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +19,9 @@ public class SmoothieActivity extends AppCompatActivity {
     private Button btnChoiceOne;
     private Button btnChoiceTwo;
     private TextView txtSwitcher;
+    private Button btnChoiceA;
+    private Button btnChoiceB;
+    private Button btnChoiceC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +34,19 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne = (Button) this.findViewById(R.id.choiceOne);
         btnChoiceTwo = (Button) this.findViewById(R.id.choiceTwo);
         txtSwitcher = (TextView) this.findViewById(R.id.textSwitcher);
+        btnChoiceA = (Button) this.findViewById(R.id.choiceA);
+        btnChoiceB = (Button) this.findViewById(R.id.choiceB);
+        btnChoiceC = (Button) this.findViewById(R.id.choiceC);
 
         pageOne();
     }
 
     private void pageOne() {
         imPicture.setImageResource(R.drawable.house_scene);
-        txtSwitcher.setText("You and your friends, Bridgette and Will, are going over to Will's house after school. \"Welcome to my house, let's go inside!\", exclaimed Will.");
+        txtSwitcher.setText("It’s a bright sunny day outside and after a long day at school, you and " +
+                "your best friends, Will and Bridgette decide to spend the afternoon at Will’s house. " +
+                "We made it!\", exclaimed Will as they neared his " +
+                "house. \"Come in!\"");
 
         backPage.setVisibility(View.INVISIBLE);
 
@@ -46,14 +54,27 @@ public class SmoothieActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Next page button clicked");
-                pageThirteen();
+                pageTwo();
             }
         });
     }
 
     private void pageTwo() {
-        imPicture.setImageResource(R.drawable.captain_cold);
-        txtSwitcher.setText("Will takes off his shoes at the door and sets them to the side. Bridgette has not taken off her shoes yet. What do you want to do?");
+        imPicture.setImageResource(R.drawable.capstone2);
+        txtSwitcher.setText("They opened the door and you notice that Will takes off his shoes before" +
+                " he walks down the hallway. Bridgette on the other hand keeps her shoes on and " +
+                "follows Will in.\n" +
+                "What do you do now?");
+
+        backPage.setVisibility(View.VISIBLE);
+
+        backPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Back page button clicked");
+                pageOne();
+            }
+        });
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,55 +86,95 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageThree() {
-        imPicture.setImageResource(R.drawable.captain_cold);
+        imPicture.setImageResource(R.drawable.capstone2);
         txtSwitcher.setVisibility(View.INVISIBLE);
-        btnChoiceOne.setVisibility(View.VISIBLE);
-        nextPage.setVisibility(View.INVISIBLE);
-        btnChoiceOne.setText("Take Off");
-        btnChoiceTwo.setVisibility(View.VISIBLE);
-        btnChoiceTwo.setText("Don't take off");
 
-        btnChoiceOne.setOnClickListener(new View.OnClickListener() {
+        btnChoiceA.setVisibility(View.VISIBLE);
+        btnChoiceA.setText("Take off shoes, Will took his off");
+        btnChoiceB.setVisibility(View.VISIBLE);
+        btnChoiceB.setText("Keep shoes on, Bridgette kept hers on");
+        btnChoiceC.setVisibility(View.VISIBLE);
+        btnChoiceC.setText("Take off shoes and tell Bridgette to take hers off too");
+
+        backPage.setVisibility(View.INVISIBLE);
+        nextPage.setVisibility(View.INVISIBLE);
+
+        btnChoiceA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(TAG, "Choice one button clicked");
-                takeOffShoesPage();
+                Log.v(TAG, "Choice A button clicked");
+                pageFourChoiceA();
             }
         });
 
-        btnChoiceTwo.setOnClickListener(new View.OnClickListener() {
+        btnChoiceB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(TAG, "Choice two button clicked");
-                dontTakeOffPage();
+                Log.v(TAG, "Choice B button clicked");
+                pageFourChoiceB();
+            }
+        });
+
+        btnChoiceC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Choice C button clicked");
+                pageFourChoiceC();
             }
         });
     }
 
-    private void takeOffShoesPage() {
-        btnChoiceOne.setVisibility(View.INVISIBLE);
-        btnChoiceTwo.setVisibility(View.INVISIBLE);
+    private void pageFourChoiceA() {
+        imPicture.setImageResource(R.drawable.capstone3);
+        btnChoiceA.setVisibility(View.INVISIBLE);
+        btnChoiceB.setVisibility(View.INVISIBLE);
+        btnChoiceC.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
         nextPage.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("You choose to take off your shoes! You also tell Bridgette to take off her shoes.");
+
+        txtSwitcher.setText("Will looks down at your feet and notices that Bridgette kept her shoes " +
+                "on. He seems uncomfortable. “Oh, hey Bridgette, can you take your shoes off?”");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Next page button clicked");
-                pageFive();
+                pageFourChoiceC();
             }
         });
 
     }
 
-    private void dontTakeOffPage() {
-        imPicture.setImageResource(R.drawable.buds);
-        btnChoiceOne.setVisibility(View.INVISIBLE);
-        btnChoiceTwo.setVisibility(View.INVISIBLE);
+    private void pageFourChoiceB() {
+        imPicture.setImageResource(R.drawable.capstone3);
+        btnChoiceA.setVisibility(View.INVISIBLE);
+        btnChoiceB.setVisibility(View.INVISIBLE);
+        btnChoiceC.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
         nextPage.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Can you guys take off your shoes?\", asks Will angrily.");
+
+        txtSwitcher.setText("Will looks down at your feet and notices that you and Bridgette kept your shoes " +
+                "on. He seems uncomfortable. “Oh, hey guys, can you take your shoes off?”");
+
+        nextPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Next page button clicked");
+                pageFourChoiceC();
+            }
+        });
+    }
+
+    private void pageFourChoiceC() {
+        imPicture.setImageResource(R.drawable.capstone4);
+        btnChoiceA.setVisibility(View.INVISIBLE);
+        btnChoiceB.setVisibility(View.INVISIBLE);
+        btnChoiceC.setVisibility(View.INVISIBLE);
+        txtSwitcher.setVisibility(View.VISIBLE);
+        nextPage.setVisibility(View.VISIBLE);
+
+        txtSwitcher.setText("Bridgette looks surprised, “What why do I need to take off my shoes? " +
+                "We don’t do that at my house”");
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,7 +190,19 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("Bridgette is very puzzled, \"What? Why? We don't do that at my house!\"");
+        backPage.setVisibility(View.VISIBLE);
+
+        txtSwitcher.setText("\"It keeps the house a lot cleaner, my parents and grandparents have " +
+                "always told me to take my shoes off. It’s the Asian culture”, explains Will. Bridgette" +
+                " nods and respectfully slips off her shoes.");
+
+        backPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Back page button clicked");
+                pageFourChoiceC();
+            }
+        });
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,7 +218,20 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"It's viewed as disrespectful in Asian cultures and it keeps the house a lot cleaner.\", explains Will. \"Oh! That makes sense.\" Bridgette takes off her shoes.");
+        backPage.setVisibility(View.VISIBLE);
+
+        txtSwitcher.setText("Bridgette looks outside at the sunny weather." +
+                "“It’s so nice! What do you guys want to do? Want to play basketball?” " +
+                "Will lights up, he loves basketball. " +
+                "“Sure! Let’s go play basketball outside. What do you think?");
+
+        backPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Next page button clicked");
+                pageFive();
+            }
+        });
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,27 +244,60 @@ public class SmoothieActivity extends AppCompatActivity {
 
     private void pageSeven() {
         imPicture.setImageResource(R.drawable.mad_kid);
-        btnChoiceOne.setVisibility(View.INVISIBLE);
-        btnChoiceTwo.setVisibility(View.INVISIBLE);
-        txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Hey, do you guys want to play some basketball?\", Will asks. \"Sure! Let's go outside and play!\", you exclaim.");
+        btnChoiceA.setVisibility(View.VISIBLE);
+        btnChoiceB.setVisibility(View.VISIBLE);
+        btnChoiceC.setVisibility(View.VISIBLE);
 
-        nextPage.setOnClickListener(new View.OnClickListener() {
+        txtSwitcher.setVisibility(View.INVISIBLE);
+        nextPage.setVisibility(View.INVISIBLE);
+
+        btnChoiceA.setText("Oh, let's play HORSE!");
+        btnChoiceB.setText("YES!");
+        btnChoiceC.setText("Let play two on one!");
+
+        backPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Next page button clicked");
+                pageSix();
+            }
+        });
+
+        btnChoiceA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Choice A button clicked");
+                pageEight();
+            }
+        });
+
+        btnChoiceB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Choice B button clicked");
+                pageEight();
+            }
+        });
+
+        btnChoiceC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Choice C button clicked");
                 pageEight();
             }
         });
     }
 
     private void pageEight() {
-        imPicture.setImageResource(R.drawable.mad_kid);
-        btnChoiceOne.setVisibility(View.INVISIBLE);
-        btnChoiceTwo.setVisibility(View.INVISIBLE);
+        imPicture.setImageResource(R.drawable.capstone7);
+        btnChoiceA.setVisibility(View.INVISIBLE);
+        btnChoiceB.setVisibility(View.INVISIBLE);
+        btnChoiceC.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"Pass the ball!\" \"Nice shot!\" \"Let's play horse!\"");
+        txtSwitcher.setText("A couple of hours later, Will’s dad, Mr. Liu, opens the door, “Hey kids! You all must be very tired, do you want to drink a smoothie?” " +
+                "Will wipes off his sweat with bright eyes, “That sound’s amazing!”");
 
+        nextPage.setVisibility(View.VISIBLE);
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -189,11 +308,23 @@ public class SmoothieActivity extends AppCompatActivity {
     }
 
     private void pageNine() {
-        imPicture.setImageResource(R.drawable.mad_kid);
-        btnChoiceOne.setVisibility(View.INVISIBLE);
-        btnChoiceTwo.setVisibility(View.INVISIBLE);
+        imPicture.setImageResource(R.drawable.capstone7);
+        btnChoiceA.setVisibility(View.INVISIBLE);
+        btnChoiceB.setVisibility(View.INVISIBLE);
+        btnChoiceC.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"You kids must be tired! Do you want a smoothie?\", asks Will's dad. \"YES!\", the children all yell excitedly");
+        backPage.setVisibility(View.VISIBLE);
+
+        txtSwitcher.setText("\"Mr. Liu laughs, “What type of smoothie do you want? We have some fruits to choose from inside.” " +
+                "“Let’s go check out the kitchen”, says Will eagerly.");
+
+        backPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Back page button clicked");
+                pageEight();
+            }
+        });
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -206,10 +337,17 @@ public class SmoothieActivity extends AppCompatActivity {
 
     private void pageTen() {
         imPicture.setImageResource(R.drawable.mad_kid);
-        btnChoiceOne.setVisibility(View.INVISIBLE);
-        btnChoiceTwo.setVisibility(View.INVISIBLE);
-        txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"You kids can pick a fruit and let me know what you want.\", says Will's dad. \"Let's go into the kitchen to see what fruit there are!\", says Will as he leads the other kids back inside his house.");
+        txtSwitcher.setText("“I want strawberry!” says Bridgette." +
+                "“Wait I want Lychee!” says Will");
+
+        backPage.setVisibility(View.VISIBLE);
+        backPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Back page button clicked");
+                pageNine();
+            }
+        });
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -225,7 +363,16 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText("\"There are so many fruits to choose from!\" \"What kind of smoothie do you guys want?\"");
+        txtSwitcher.setText("Bridgette gives will a funny look “Ew, what is Lychee? It looks gross! Yuck!”");
+
+        backPage.setVisibility(View.VISIBLE);
+        backPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Back page button clicked");
+                pageTen();
+            }
+        });
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -241,8 +388,17 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText(" \"I want strawberry!\", says Bridgette. \"No! I want lychee!\", exclaims Will. \"Ew! What is that? It looks gross. Yuck! Is that from China or something?\", says Bridgette." +
-                "\"It's not gross! Have you tried before?\", replies Will angrily. \"Guys stop fighting, it's just a smoothie!\", you shout.");
+        txtSwitcher.setText("Will furrows his brows. " +
+                "“It’s not gross, why would you say that? It’s really good! Have you tried it before?”");
+
+        backPage.setVisibility(View.VISIBLE);
+        backPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Back page button clicked");
+                pageEleven();
+            }
+        });
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -258,9 +414,16 @@ public class SmoothieActivity extends AppCompatActivity {
         btnChoiceOne.setVisibility(View.INVISIBLE);
         btnChoiceTwo.setVisibility(View.INVISIBLE);
         txtSwitcher.setVisibility(View.VISIBLE);
-        txtSwitcher.setText(" \"No!\" yells Will as he runs to his room.");
+        txtSwitcher.setText("Bridgette looks at him like he’s crazy, “Ew, why would I try that? Is it from China or something?”");
 
         backPage.setVisibility(View.VISIBLE);
+        backPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(TAG, "Back page button clicked");
+                pageTwelve();
+            }
+        });
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override

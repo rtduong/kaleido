@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/homescreen"
+    android:background="@drawable/wallpaper"
     tools:context="edu.uw.rtduong.kaleido.MenuActivity">
 
     <Button
@@ -17,8 +17,10 @@
         android:text="play"
         android:id="@+id/btnPlayId"
         android:drawableTop="@drawable/ic_play"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/tagLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -26,6 +28,7 @@
         android:text="profile"
         android:id="@+id/btnProfileId"
         android:drawableTop="@drawable/ic_profile"
+        android:background="@android:color/transparent"
         android:layout_alignTop="@+id/btnSettingsId"
         android:layout_alignLeft="@+id/tagLine"
         android:layout_alignStart="@+id/tagLine" />
@@ -36,6 +39,7 @@
         android:text="settings"
         android:id="@+id/btnSettingsId"
         android:drawableTop="@drawable/ic_settings"
+        android:background="@android:color/transparent"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/tagLine"
         android:layout_alignEnd="@+id/tagLine" />
