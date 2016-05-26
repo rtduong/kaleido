@@ -32,8 +32,8 @@ public class MenuActivity extends AppCompatActivity {
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(TAG, "Settings button clicked");
-                Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+                Log.v(TAG, "About button clicked");
+                Intent i = new Intent(getApplicationContext(), AboutActivity.class);
                 startActivity(i);
             }
         });
@@ -43,8 +43,8 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Profile button clicked");
-//                Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
-//                startActivity(i);
+                Intent i = new Intent(getApplicationContext(), ComingActivity.class);
+                startActivity(i);
             }
         });
 
