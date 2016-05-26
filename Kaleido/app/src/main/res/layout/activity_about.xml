@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/wallpaper"
+    tools:context="edu.uw.rtduong.kaleido.AboutActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We seek to expose young children to diverse groups of people from different cultural backgrounds through an interactive storytelling app. This application will serve as an example that diversity, social awareness, and empathy can and should be incorporated into everything that we do. The interactive aspect of our story app will allow children to make decisions for their characters and see how the consequences affect them and the other characters in the story. Our aim is to have parents download this app for their children and encourage them to play it in order to teach them about stereotypes that currently exist and how they can combat them. We also want parents to guide their children through the stories and educate them on specific social issues as they are following the story."
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:background="#88f49e"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

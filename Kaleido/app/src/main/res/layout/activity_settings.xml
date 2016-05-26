@@ -23,19 +23,20 @@
         android:layout_height="wrap_content"
         android:text="Sound"
         android:id="@+id/btnSoundId"
+        android:background="#88f49e"
         android:drawableTop="@drawable/ic_sound_menu"
-        android:layout_marginLeft="85dp"
-        android:layout_marginStart="85dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="77dp" />
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/txtSettingId"
+        android:layout_toStartOf="@+id/txtSettingId"
+        android:layout_marginRight="67dp"
+        android:layout_marginEnd="67dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="About"
         android:id="@+id/btnAboutId"
+        android:background="#88f49e"
         android:layout_alignTop="@+id/btnSoundId"
         android:layout_toRightOf="@+id/txtSettingId"
         android:layout_toEndOf="@+id/txtSettingId"
@@ -43,13 +44,5 @@
         android:layout_marginStart="77dp"
         android:layout_alignBottom="@+id/btnSoundId" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:id="@+id/btnBackId"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

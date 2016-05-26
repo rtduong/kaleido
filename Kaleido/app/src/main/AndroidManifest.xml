@@ -30,6 +30,11 @@
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".SmoothieActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".ContinueActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity android:name=".AboutActivity"
             android:screenOrientation="sensorLandscape"></activity>
     </application>
 

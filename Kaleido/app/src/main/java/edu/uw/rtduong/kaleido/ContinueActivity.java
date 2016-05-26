@@ -7,26 +7,22 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class SettingsActivity extends AppCompatActivity {
+public class ContinueActivity extends AppCompatActivity {
 
-    private static final String TAG = "SettingsActivity";
-
+    final String TAG = "Continue";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_continue);
 
-        Log.v(TAG, "Activity Started");
-
-        final Button btnPlay = (Button) this.findViewById(R.id.btnAboutId);
+        final Button btnPlay = (Button) this.findViewById(R.id.backhome);
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Play button clicked");
-                Intent i = new Intent(getApplicationContext(), AboutActivity.class);
+                Intent i = new Intent(getApplicationContext(), MenuActivity.class);
                 startActivity(i);
             }
         });
-
     }
 }

@@ -1,5 +1,6 @@
 package edu.uw.rtduong.kaleido;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -488,8 +489,8 @@ public class SmoothieActivity extends AppCompatActivity {
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(TAG, "Next page button clicked");
-                pageFifteen();
+                Intent i = new Intent(getApplicationContext(), ContinueActivity.class);
+                startActivity(i);
             }
         });
     }
@@ -505,8 +506,8 @@ public class SmoothieActivity extends AppCompatActivity {
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(TAG, "Next page button clicked");
-                pageFifteen();
+                Intent i = new Intent(getApplicationContext(), ContinueActivity.class);
+                startActivity(i);
             }
         });
     }
